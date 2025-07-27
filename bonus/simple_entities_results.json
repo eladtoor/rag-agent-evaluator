@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "source_file": "The_Day_Everything_Slowed_Down.txt",
+    "extraction_timestamp": "2025-07-23T16:47:06.746690",
+    "total_entities": 52,
+    "total_relationships": 75,
+    "extraction_method": "pattern_matching"
+  },
+  "entities": [
+    {
+      "type": "PERSON",
+      "value": "Ed",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "PERSON",
+      "value": "Junaid Malik",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "PERSON",
+      "value": "Kiera",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "PERSON",
+      "value": "Dave",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "PERSON",
+      "value": "Sharris",
+      "confidence": 0.9,
+      "count": 3
+    },
+    {
+      "type": "PERSON",
+      "value": "Matt",
+      "confidence": 0.9,
+      "count": 6
+    },
+    {
+      "type": "PERSON",
+      "value": "Jmalik",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "SYSTEM",
+      "value": "sw-07b",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "SYSTEM",
+      "value": "corp-fs02",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "SYSTEM",
+      "value": "staging-3",
+      "confidence": 0.9,
+      "count": 5
+    },
+    {
+      "type": "SYSTEM",
+      "value": "q2_pipeline",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "SYSTEM",
+      "value": "marketing_campaign_2020",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "SYSTEM",
+      "value": "jenkins",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "SYSTEM",
+      "value": "buildconfig.yaml",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "SYSTEM",
+      "value": "corp-vpn3",
+      "confidence": 0.9,
+      "count": 4
+    },
+    {
+      "type": "SYSTEM",
+      "value": "logi_loader.dll",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "TIME",
+      "value": "2:47 am",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "6:12 am",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "10:30 pm",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "8:19 pm",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "9:02 pm",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "wednesday",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "7:12 pm",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "tuesday",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "TIME",
+      "value": "7:41 am",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "monday",
+      "confidence": 0.9,
+      "count": 2
+    },
+    {
+      "type": "TIME",
+      "value": "4:23 am",
+      "confidence": 0.9,
+      "count": 1
+    },
+    {
+      "type": "TIME",
+      "value": "3:11 am",
+      "confidence": 0.9,
+      "count": 4
+    },
+    {
+      "type": "LOCATION",
+      "value": "training pc",
+      "confidence": 0.8,
+      "count": 2
+    },
+    {
+      "type": "LOCATION",
+      "value": "dev servers",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "LOCATION",
+      "value": "marketing workstations",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "LOCATION",
+      "value": "third floor",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "LOCATION",
+      "value": "west wing",
+      "confidence": 0.8,
+      "count": 2
+    },
+    {
+      "type": "LOCATION",
+      "value": "lab servers",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "breach",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "dlp",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "endpoint protection",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "heuristic scan",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "vpn tunnel",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "av console",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "malware",
+      "confidence": 0.8,
+      "count": 2
+    },
+    {
+      "type": "SECURITY",
+      "value": "antivirus",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "SECURITY",
+      "value": "compromise",
+      "confidence": 0.8,
+      "count": 2
+    },
+    {
+      "type": "NETWORK",
+      "value": "subnet",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "metrics.windowupdate.io",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "smb",
+      "confidence": 0.8,
+      "count": 2
+    },
+    {
+      "type": "NETWORK",
+      "value": "vlan",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "https",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "wan",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "updates-status-sync.live",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "cdn.nodeflux.ai",
+      "confidence": 0.8,
+      "count": 1
+    },
+    {
+      "type": "NETWORK",
+      "value": "dns",
+      "confidence": 0.8,
+      "count": 2
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Kiera",
+      "target": "sw-07b",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "corp-fs02",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "staging-3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "q2_pipeline",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "jenkins",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "buildconfig.yaml",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "corp-vpn3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "logi_loader.dll",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Kiera",
+      "target": "training pc",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Kiera",
+      "target": "dev servers",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Kiera",
+      "target": "marketing workstations",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Kiera",
+      "target": "third floor",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Kiera",
+      "target": "west wing",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Kiera",
+      "target": "lab servers",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Sharris",
+      "target": "sw-07b",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "corp-fs02",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "staging-3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "q2_pipeline",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "jenkins",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "buildconfig.yaml",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "corp-vpn3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Sharris",
+      "target": "logi_loader.dll",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "sw-07b",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "corp-fs02",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "staging-3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "q2_pipeline",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "jenkins",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "buildconfig.yaml",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "corp-vpn3",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "logi_loader.dll",
+      "relationship_type": "ACCESSED",
+      "confidence": 0.7
+    },
+    {
+      "source": "Matt",
+      "target": "training pc",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Matt",
+      "target": "dev servers",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Matt",
+      "target": "marketing workstations",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Matt",
+      "target": "third floor",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Matt",
+      "target": "west wing",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "Matt",
+      "target": "lab servers",
+      "relationship_type": "WORKED_IN",
+      "confidence": 0.8
+    },
+    {
+      "source": "3:11 am",
+      "target": "sw-07b",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "corp-fs02",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "staging-3",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "q2_pipeline",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "jenkins",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "buildconfig.yaml",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "corp-vpn3",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "3:11 am",
+      "target": "logi_loader.dll",
+      "relationship_type": "EVENT_AT",
+      "confidence": 0.9
+    },
+    {
+      "source": "av console",
+      "target": "sw-07b",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "corp-fs02",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "staging-3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "q2_pipeline",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "jenkins",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "buildconfig.yaml",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "corp-vpn3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "av console",
+      "target": "logi_loader.dll",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "sw-07b",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "corp-fs02",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "staging-3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "q2_pipeline",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "jenkins",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "buildconfig.yaml",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "corp-vpn3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "malware",
+      "target": "logi_loader.dll",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "sw-07b",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "corp-fs02",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "staging-3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "q2_pipeline",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "marketing_campaign_2020",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "jenkins",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "buildconfig.yaml",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "corp-vpn3",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    },
+    {
+      "source": "antivirus",
+      "target": "logi_loader.dll",
+      "relationship_type": "PROTECTS",
+      "confidence": 0.6
+    }
+  ]
+}

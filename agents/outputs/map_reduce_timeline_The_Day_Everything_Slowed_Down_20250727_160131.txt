@@ -1,0 +1,77 @@
+
+• 3:11 AM - File permission change to buildconfig.yaml on staging-3 before machine rebooted
+• 3:13 AM - Found a file called logi_loader.dll copied to four separate machines, including staging-3, an idle lab server, and the internal Jenkins node
+• Early morning (4:23 AM) - Outbound connections to weird subdomains detected in DNS logs
+• 6:12 AM - Domain account credentials authenticated successfully
+• 6:53 AM - Domain account credentials authenticated successfully
+• 7:00 AM - At desk half-heartedly sipping burnt coffee, scrolling through email
+• 7:30 AM - Got to the office, Matt was already there with bloodshot eyes, nodded silently
+• 7:41 AM - Domain account credentials authenticated successfully
+• 9:02 PM - Stood up and left the office
+• Time not specified - Groaned and ignored low-priority alert notification exactly junk or testing malware analysis tools
+• Time not specified - Decided to check after standup
+• Time not specified - Standup started with usual round of blockers and no blockers
+• Time not specified - Mentioned AV alert and mysterious reboot, Ed the backend dev made a comment exactly ghosts in the shell
+• Time not specified - Jotted down to look into deeper
+• Time not specified - Pulled up system logs for staging-3, found a reboot logged exactly 3:11 am with no matching patch activity or automation job triggered
+• Time not specified - Uptime counter reset, hardware status logs had a brief gap of five minutes with no entries
+• Time not specified - Made a mental note to check the kernel logs later
+• Time not specified - Support team pinged on IT helpdesk Slack channel exactly slow file access reported by multiple users in sales
+• Time not specified - Walked over to sales area to see the problem firsthand
+• Time not specified - Confirmed file explorer was lagging when trying to open files from corp-fs02 q2_pipeline share
+• Time not specified - Checked SMB traffic at desk, noticed a ton of traffic from user sharris hitting the same folder
+• Time not specified - Asked sharris exactly the traffic, she mentioned she hadn't logged in yet and was still on her personal laptop
+• Time not specified - Noticed dozens of open sessions on domain account
+• Time not specified - Sent message to Matt, the security engineer, exactly suspicious logins
+• Time not specified - Sent a quick message to Matt, our security engineer, exactly odd logins from Sharris
+• Time not specified - Noticed malformed packets in SMB traffic from internal switch sw-07b connecting the west wing of the third floor
+• Time not specified - Discovered two marketing workstations powered on, one with a sticky note saying "training pc do not use" taped to it, both machines logged in
+• Time not specified - Discovered both machines with sticky note "training pc do not use" and logged in guest accounts
+• Time not specified - Took pictures of the screens with phone for documentation
+• Time not specified - Matt replied and requested a copy of the logs for investigation
+• Time not specified - Zipped and sent logs to Matt
+• Time not specified - Helpdesk started logging performance issues beyond sales share, including git repo timeouts reported by developers
+• Time not specified - Helpdesk was logging performance issues across the board, not just the sales share
+• Time not specified - Some developers were reporting git repo timeouts
+• Time not specified - Asked Dave from networking exactly latency on WAN monitors
+• Time not specified - Dave mentioned a few packet drops from corp-vpn3, which had been flaky for weeks
+• Time not specified - Realized corp-vpn3 node was tied to VPN tunnel for third-party access
+• Time not specified - Opened VPN auth logs to search for unusual login patterns
+• Time not specified - Junaid Malik filed PTO two weeks ago
+• Time not specified - Received alert notification while still half-asleep
+• Time not specified - Called Matt to discuss jmalik's unusual login
+• Time not specified - Matt discovered something worse while investigating
+• Time not specified - Matt suggests checking DNS logs for unusual activity
+• Time not specified - Investigated internal DNS logs and confirmed unusual requests
+• Time not specified - Escalated to a full internal incident
+• Time not specified - Sent out a containment advisory to the IT team to lock down VPN access, audit all active sessions, and begin isolating the west wing switch stack
+• Time not specified - Closed the VLAN to any outbound traffic except through the inspection proxy
+• Time not specified - The noise dropped immediately
+• Time not specified - Lunchtime came and went but none of us left our desks
+• Time not specified - Confirmed that sharris account had been compromised, probably used as a lateral jump point after an earlier compromise
+• Time not specified - 80% sure the training PC had been used as an entry vector
+• Time not specified - Realized the training PC may have been used as an entry vector
+• Time not specified - Discovered a USB stick labeled "marketing_campaign_2020" still inserted in one of the machines
+• Time not specified - Noted that the model of machine had no endpoint protection due to budget cuts
+• Time not specified - Felt a pit in the stomach due to the situation
+• Time not specified - Noticed something else that caught attention
+• Time not specified - Flagged suspicious activity to Matt and continued triaging
+• Time not specified - Received message from Kiera exactly egress volumes on staging subnet
+• Time not specified - Checked traffic analyzer showing over 7gb of outbound traffic to cdn.nodeflux.ai
+• Time not specified - Discovered over 7gb of outbound traffic in the last six hours to cdn.nodeflux.ai
+• Time not specified - Joined emergency call with legal security and two VPs
+• Time not specified - Provided summary of unauthorized access, credential compromise, and probable exfiltration
+• Time not specified - Agreed to start crafting communications for potential breach notification
+• Time not specified - Worked silently until 8:19 pm with occasional keyboard clacks and sighs
+• Time not specified - Hadn't eaten since the night before
+• Time not specified - Outside smelled like rain but hadn't fallen yet
+• Time not specified - Woke up groggy the next day (Wednesday)
+• Time not specified - Dreamt that all servers had grown arms and were shaking awake
+• Time not specified - Ran full scans on the training machines
+• Time not specified - Discovered a hidden scheduled task disguised as a printer driver update triggering daily at 3:11 am for the past two weeks
+• Time not specified - Found executable logi_loader.dll present in compressed form on the Jenkins pipeline embedded in a test runner artifact
+• Time not specified - Legal team prepping disclosures
+• Time not specified - Sat at desk rereading logs and piecing together the situation from fragments of time
+• Time not specified - Realization that file alteration happened before reboot by something in memory
+• Time not specified - Malware detected, attacker used dormant accounts and timed actions during system quiet hours
+• Time not specified - Concern exactly how long malware had been present before detection

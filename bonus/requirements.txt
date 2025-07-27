@@ -1,0 +1,6 @@
+zep-python
+requests
+pydantic
+streamlit
+matplotlib
+networkx 

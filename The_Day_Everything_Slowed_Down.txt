@@ -1,0 +1,179 @@
+the day everything slowed down started like any other tuesday well technically it started monday night but i didn't realize it at the time
+
+monday evening was unusually quiet i remember shutting down my work laptop around 7:12 pm i'd been dealing with a pile of backlog tickets and just wanted the day to end
+
+i watched some dumb comedy on netflix and went to bed by 10:30 pm
+
+tuesday my phone buzzed while i was still half-asleep it was one of those low-priority alert notifications from the av console something about a heuristic scan trigger on one of the dev servers
+
+i groaned and ignored it we get tons of those and it's usually just someone compiling junk or testing malware analysis tools in a sandbox they forgot to label properly
+
+by 7:00 am i was at my desk half-heartedly sipping burnt coffee scrolling through email
+
+i had a few slack messages queued up from overnight mostly routine junk but there was one from kiera our cloud infrastructure lead timestamped 3:27 am that just said hey did anyone restart the build runner on staging-3 it rebooted by itself
+
+i figured i'd check it after standup
+
+standup started it was the usual round of blockers no blockers and mumbling
+
+i mentioned the av alert and the mysterious reboot and ed the backend dev who always has a smart comment said something like ghosts in the shell we chuckled
+
+i jotted it down to look into deeper
+
+i pulled up the system logs for staging-3 there was indeed a reboot logged around 3:11 am but no matching patch activity or automation job triggered at that time
+
+weird even weirder the uptime counter reset but the hardware status logs had a brief gap like maybe five minutes of no entries at all
+
+i chalked it up to a fluke and made a mental note to check the kernel logs later
+
+the support team pinged me on our it helpdesk slack channel multiple users in sales were reporting extremely slow file access on the shared drive
+
+i walked over to their area old habit i like seeing problems with my own eyes
+
+sure enough file explorer was lagging like crazy when trying to open anything from the corp-fs02 q2_pipeline share
+
+i went back to my desk and checked the smb traffic there was a ton of it all coming from one user sharris and hitting the same folder
+
+at first i assumed she was copying something big but when i asked her about it she looked puzzled
+
+i haven't even logged in yet she said i'm still on my personal laptop
+
+that didn't sit right her domain account had dozens of open sessions when i pulled the login records her credentials had authenticated successfully at 6:12 am and then again at 6:53 and then once more right around 7:41 am
+
+three logins from different subnets that's when i started to get uneasy
+
+i sent a quick message to matt our security engineer hey got something odd with sharris logins may be worth a look
+
+while i waited i kept poking at the smb traffic wireshark was already showing signs of malformed packets from one of the internal switches sw-07b which connects the west wing of the third floor
+
+that's where our two unused marketing workstations are located
+
+i walked over expecting to find them powered off
+
+nope i found both machines on one had a sticky note with training pc do not use taped to it but they were both logged in
+
+the usernames were guest accounts but someone had clearly used them recently
+
+i pulled out my phone and took a few pictures of the screens just in case
+
+back at my desk matt had replied he was already looking into the login patterns and asked for a copy of the logs
+
+i zipped and sent them over
+
+by now the helpdesk was logging performance issues across the board not just the sales share some developers were reporting git repo timeouts
+
+i asked dave from networking if there was any latency showing up on our wan monitors
+
+he said nothing huge just a few packet drops from corp-vpn3 but that's been flaky for weeks
+
+that's when something clicked for me the corp-vpn3 node was tied into our vpn tunnel for third-party access used mostly by contractors and offsite analysts
+
+i opened up the vpn auth logs and searched for any unusual login patterns
+
+sure enough a user jmalik had connected via corp-vpn3 at 2:47 am and stayed online for 6 hours
+
+that didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago
+
+i called matt you seeing this jmalik was connected overnight via corp-vpn3 he's not even in the country right now
+
+matt was silent for a beat yeah he finally said i see it and i think i found something worse
+
+i spun around in my chair
+
+check your dns logs he continued we're resolving a bunch of outbound connections to weird subdomains stuff like updates-status-sync.live and metrics.windowupdate.io these aren't microsoft-owned
+
+i jumped into our internal dns logs he was right hundreds of requests since early that morning some as early as 4:23 am
+
+we escalated to a full internal incident
+
+i sent out a containment advisory to the it team lock down vpn access audit all active sessions and begin isolating the west wing switch stack
+
+we closed the vlan to any outbound traffic except through our inspection proxy
+
+the noise dropped immediately
+
+lunch time came and went but none of us left our desks
+
+by then we'd confirmed that sharris account had been compromised probably used as a lateral jump point after an earlier compromise
+
+i was now 80% sure the training pc had been used as an entry vector
+
+one of them had a usb stick still inserted labeled marketing_campaign_2020
+
+that model of machine had no endpoint protection installed budget cuts
+
+i had a pit in my stomach
+
+a weird file called logi_loader.dll had been copied to four separate machines around 3:13 am including staging-3 one of the idle lab servers and even our internal jenkins node
+
+none of those machines had antivirus alerts
+
+the hash didn't match anything in virustotal
+
+then something else caught my eye
+
+on staging-3 the event logs showed a file permission change to buildconfig.yaml at 3:11 am before the machine rebooted
+
+that shouldn't be possible
+
+i flagged it to matt but moved on there was too much to triage
+
+kiera messaged me you're gonna want to look at egress volumes on the staging subnet
+
+data was flowing out a lot of it
+
+i checked our traffic analyzer over 7gb of outbound traffic in the last six hours piped slowly over https to cdn.nodeflux.ai
+
+our dlp didn't catch it
+
+i joined the emergency call legal security and two of the vps were on
+
+i gave a blunt summary of what we knew unauthorized access credential compromise probable exfiltration
+
+we agreed to start crafting comms for a potential breach notification just in case
+
+the rest of the day was a blur
+
+we worked until 8:19 pm mostly silent except for keyboard clacks and the occasional sigh
+
+at 9:02 pm i finally stood up and left the office
+
+i hadn't eaten since the night before
+
+outside smelled like rain but it hadn't fallen yet
+
+i woke up groggy the next day wednesday
+
+i dreamt that all the servers had grown arms and were shaking me awake
+
+when i got to the office around 7:30 matt was already there eyes bloodshot
+
+he nodded silently
+
+we ran full scans on the training machines
+
+one of them had a hidden scheduled task cleverly disguised as a printer driver update
+
+it had triggered daily at 3:11 am every morning for the past two weeks
+
+we had missed it
+
+we discovered that the same executable logi_loader.dll was present in compressed form on the jenkins pipeline embedded in a test runner artifact
+
+which meant every build had been packaging it silently
+
+for how long we didn't know yet
+
+our legal team was prepping disclosures
+
+i sat at my desk rereading logs piecing together the whole thing from fragments of time
+
+that file permission change at 3:11 am on staging-3 now seemed a lot more significant
+
+it had happened before the reboot which means the file was altered by something running in memory
+
+something we didn't detect
+
+the malware was careful the attacker used dormant accounts hid in plain sight and timed everything to match system quiet hours
+
+and i can't stop wondering how long had it been there before we noticed 

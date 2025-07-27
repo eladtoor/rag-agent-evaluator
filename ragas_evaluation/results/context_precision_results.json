@@ -1,0 +1,214 @@
+{
+  "metric_name": "context_precision",
+  "overall_score": 0.7999999999349999,
+  "evaluation_timestamp": "2025-07-27T16:09:14.076714",
+  "detailed_results": [
+    {
+      "user_input": "What time did the narrator shut down their work laptop on Monday evening?",
+      "retrieved_contexts": [
+        "monday evening was unusually quiet i remember shutting down my work laptop around 7:12 pm i'd been dealing with a pile of backlog tickets and just wanted the day to end\n\ni watched some dumb comedy on netflix and went to bed by 10:30 pm",
+        "the rest of the day was a blur\n\nwe worked until 8:19 pm mostly silent except for keyboard clacks and the occasional sigh\n\nat 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before"
+      ],
+      "response": "The narrator shut down their work laptop at approximately 7:12 pm on Monday evening.",
+      "reference": "7:12 pm",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What time did the narrator go to bed on Monday night?",
+      "retrieved_contexts": [
+        "monday evening was unusually quiet i remember shutting down my work laptop around 7:12 pm i'd been dealing with a pile of backlog tickets and just wanted the day to end\n\ni watched some dumb comedy on netflix and went to bed by 10:30 pm",
+        "i watched some dumb comedy on netflix and went to bed by 10:30 pm\n\ntuesday my phone buzzed while i was still half-asleep it was one of those low-priority alert notifications from the av console something about a heuristic scan trigger on one of the dev servers"
+      ],
+      "response": "The narrator went to bed at 10:30 pm on Monday night.",
+      "reference": "10:30 pm",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What time did the staging-3 server reboot occur?",
+      "retrieved_contexts": [
+        "that file permission change at 3:11 am on staging-3 now seemed a lot more significant\n\nit had happened before the reboot which means the file was altered by something running in memory\n\nsomething we didn't detect",
+        "i jotted it down to look into deeper\n\ni pulled up the system logs for staging-3 there was indeed a reboot logged around 3:11 am but no matching patch activity or automation job triggered at that time"
+      ],
+      "response": "The staging-3 server reboot occurred at approximately 3:11 am.",
+      "reference": "3:11 am",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What time did Kiera send the Slack message about the build runner?",
+      "retrieved_contexts": [
+        "i had a few slack messages queued up from overnight mostly routine junk but there was one from kiera our cloud infrastructure lead timestamped 3:27 am that just said hey did anyone restart the build runner on staging-3 it rebooted by itself\n\ni figured i'd check it after standup",
+        "it had triggered daily at 3:11 am every morning for the past two weeks\n\nwe had missed it\n\nwe discovered that the same executable logi_loader.dll was present in compressed form on the jenkins pipeline embedded in a test runner artifact\n\nwhich meant every build had been packaging it silently"
+      ],
+      "response": "Kiera sent the Slack message at 3:27 am.",
+      "reference": "3:27 am",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What time did the suspicious file get copied to multiple machines?",
+      "retrieved_contexts": [
+        "that model of machine had no endpoint protection installed budget cuts\n\ni had a pit in my stomach\n\na weird file called logi_loader.dll had been copied to four separate machines around 3:13 am including staging-3 one of the idle lab servers and even our internal jenkins node",
+        "that file permission change at 3:11 am on staging-3 now seemed a lot more significant\n\nit had happened before the reboot which means the file was altered by something running in memory\n\nsomething we didn't detect"
+      ],
+      "response": "The suspicious file, logi_loader.dll, was copied to multiple machines around 3:13 am.",
+      "reference": "3:13 am",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What time did sharris's account first authenticate successfully?",
+      "retrieved_contexts": [
+        "three logins from different subnets that's when i started to get uneasy\n\ni sent a quick message to matt our security engineer hey got something odd with sharris logins may be worth a look",
+        "i haven't even logged in yet she said i'm still on my personal laptop\n\nthat didn't sit right her domain account had dozens of open sessions when i pulled the login records her credentials had authenticated successfully at 6:12 am and then again at 6:53 and then once more right around 7:41 am"
+      ],
+      "response": "Sharris's account first authenticated successfully at 6:12 am.",
+      "reference": "6:12 am",
+      "context_precision": 0.49999999995
+    },
+    {
+      "user_input": "What time did jmalik connect to the VPN?",
+      "retrieved_contexts": [
+        "i opened up the vpn auth logs and searched for any unusual login patterns\n\nsure enough a user jmalik had connected via corp-vpn3 at 2:47 am and stayed online for 6 hours\n\nthat didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago",
+        "that didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago\n\ni called matt you seeing this jmalik was connected overnight via corp-vpn3 he's not even in the country right now\n\nmatt was silent for a beat yeah he finally said i see it and i think i found something worse"
+      ],
+      "response": "Jmalik connected to the VPN at 2:47 am.",
+      "reference": "2:47 am",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What time were the earliest DNS requests detected?",
+      "retrieved_contexts": [
+        "i jumped into our internal dns logs he was right hundreds of requests since early that morning some as early as 4:23 am\n\nwe escalated to a full internal incident",
+        "i spun around in my chair\n\ncheck your dns logs he continued we're resolving a bunch of outbound connections to weird subdomains stuff like updates-status-sync.live and metrics.windowupdate.io these aren't microsoft-owned"
+      ],
+      "response": "The earliest DNS requests were detected as early as 4:23 am.",
+      "reference": "4:23 am",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What time did the incident response team finish working on Tuesday?",
+      "retrieved_contexts": [
+        "we escalated to a full internal incident\n\ni sent out a containment advisory to the it team lock down vpn access audit all active sessions and begin isolating the west wing switch stack\n\nwe closed the vlan to any outbound traffic except through our inspection proxy\n\nthe noise dropped immediately",
+        "we agreed to start crafting comms for a potential breach notification just in case\n\nthe rest of the day was a blur\n\nwe worked until 8:19 pm mostly silent except for keyboard clacks and the occasional sigh\n\nat 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before"
+      ],
+      "response": "The incident response team finished working at 8:19 pm on Tuesday.",
+      "reference": "8:19 pm",
+      "context_precision": 0.49999999995
+    },
+    {
+      "user_input": "What time did the narrator leave the office on Tuesday?",
+      "retrieved_contexts": [
+        "at 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before\n\noutside smelled like rain but it hadn't fallen yet\n\ni woke up groggy the next day wednesday",
+        "the rest of the day was a blur\n\nwe worked until 8:19 pm mostly silent except for keyboard clacks and the occasional sigh\n\nat 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before"
+      ],
+      "response": "9:02 pm",
+      "reference": "9:02 pm",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What time did the narrator arrive at the office on Wednesday?",
+      "retrieved_contexts": [
+        "at 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before\n\noutside smelled like rain but it hadn't fallen yet\n\ni woke up groggy the next day wednesday",
+        "at 9:02 pm i finally stood up and left the office\n\ni hadn't eaten since the night before\n\noutside smelled like rain but it hadn't fallen yet\n\ni woke up groggy the next day wednesday\n\ni dreamt that all the servers had grown arms and were shaking me awake"
+      ],
+      "response": "The narrator arrived at the office around 7:30 am on Wednesday.",
+      "reference": "7:30 am",
+      "context_precision": 0.0
+    },
+    {
+      "user_input": "What was the name of the suspicious DLL file?",
+      "retrieved_contexts": [
+        "that model of machine had no endpoint protection installed budget cuts\n\ni had a pit in my stomach\n\na weird file called logi_loader.dll had been copied to four separate machines around 3:13 am including staging-3 one of the idle lab servers and even our internal jenkins node",
+        "it had triggered daily at 3:11 am every morning for the past two weeks\n\nwe had missed it\n\nwe discovered that the same executable logi_loader.dll was present in compressed form on the jenkins pipeline embedded in a test runner artifact\n\nwhich meant every build had been packaging it silently"
+      ],
+      "response": "logi_loader.dll",
+      "reference": "logi_loader.dll",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What file had its permissions changed before the reboot?",
+      "retrieved_contexts": [
+        "that file permission change at 3:11 am on staging-3 now seemed a lot more significant\n\nit had happened before the reboot which means the file was altered by something running in memory\n\nsomething we didn't detect",
+        "i sat at my desk rereading logs piecing together the whole thing from fragments of time\n\nthat file permission change at 3:11 am on staging-3 now seemed a lot more significant\n\nit had happened before the reboot which means the file was altered by something running in memory"
+      ],
+      "response": "The specific file whose permissions were changed before the reboot is not explicitly identified in the provided context. The logs indicate a significant file permission change at 3:11 am on staging-3, occurring prior to the reboot and suggesting it was altered by in-memory malware. However, the exact filename or path of this file is not mentioned.",
+      "reference": "buildconfig.yaml",
+      "context_precision": 0.0
+    },
+    {
+      "user_input": "What was the label on the USB stick found in the training PC?",
+      "retrieved_contexts": [
+        "i was now 80% sure the training pc had been used as an entry vector\n\none of them had a usb stick still inserted labeled marketing_campaign_2020\n\nthat model of machine had no endpoint protection installed budget cuts\n\ni had a pit in my stomach",
+        "that's where our two unused marketing workstations are located\n\ni walked over expecting to find them powered off\n\nnope i found both machines on one had a sticky note with training pc do not use taped to it but they were both logged in"
+      ],
+      "response": "The label on the USB stick found in the training PC was \"marketing_campaign_2020.\"",
+      "reference": "marketing_campaign_2020",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What domain was used for data exfiltration?",
+      "retrieved_contexts": [
+        "data was flowing out a lot of it\n\ni checked our traffic analyzer over 7gb of outbound traffic in the last six hours piped slowly over https to cdn.nodeflux.ai\n\nour dlp didn't catch it\n\ni joined the emergency call legal security and two of the vps were on",
+        "i spun around in my chair\n\ncheck your dns logs he continued we're resolving a bunch of outbound connections to weird subdomains stuff like updates-status-sync.live and metrics.windowupdate.io these aren't microsoft-owned"
+      ],
+      "response": "The domain used for data exfiltration was cdn.nodeflux.ai.",
+      "reference": "cdn.nodeflux.ai",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What domain was mentioned alongside updates-status-sync.live?",
+      "retrieved_contexts": [
+        "i spun around in my chair\n\ncheck your dns logs he continued we're resolving a bunch of outbound connections to weird subdomains stuff like updates-status-sync.live and metrics.windowupdate.io these aren't microsoft-owned",
+        "data was flowing out a lot of it\n\ni checked our traffic analyzer over 7gb of outbound traffic in the last six hours piped slowly over https to cdn.nodeflux.ai\n\nour dlp didn't catch it\n\ni joined the emergency call legal security and two of the vps were on"
+      ],
+      "response": "metrics.windowupdate.io",
+      "reference": "metrics.windowupdate.io",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "What VPN server did jmalik connect to?",
+      "retrieved_contexts": [
+        "i opened up the vpn auth logs and searched for any unusual login patterns\n\nsure enough a user jmalik had connected via corp-vpn3 at 2:47 am and stayed online for 6 hours\n\nthat didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago",
+        "that didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago\n\ni called matt you seeing this jmalik was connected overnight via corp-vpn3 he's not even in the country right now\n\nmatt was silent for a beat yeah he finally said i see it and i think i found something worse"
+      ],
+      "response": "jmalik connected to the corp-vpn3 server.",
+      "reference": "corp-vpn3",
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "Which server showed malformed packets from switch sw-07b?",
+      "retrieved_contexts": [
+        "while i waited i kept poking at the smb traffic wireshark was already showing signs of malformed packets from one of the internal switches sw-07b which connects the west wing of the third floor\n\nthat's where our two unused marketing workstations are located",
+        "we escalated to a full internal incident\n\ni sent out a containment advisory to the it team lock down vpn access audit all active sessions and begin isolating the west wing switch stack\n\nwe closed the vlan to any outbound traffic except through our inspection proxy\n\nthe noise dropped immediately"
+      ],
+      "response": "The context indicates that the malformed packets from switch sw-07b were observed in SMB traffic, which typically involves file sharing services. The specific server associated with SMB traffic in the context is the \"unused marketing workstations\" located in the west wing of the third floor. Therefore, the server that showed malformed packets from switch sw-07b is the unused marketing workstation(s) in that area.",
+      "reference": "staging-3",
+      "context_precision": 0.0
+    },
+    {
+      "user_input": "What was the total amount of outbound traffic detected?",
+      "retrieved_contexts": [
+        "data was flowing out a lot of it\n\ni checked our traffic analyzer over 7gb of outbound traffic in the last six hours piped slowly over https to cdn.nodeflux.ai\n\nour dlp didn't catch it\n\ni joined the emergency call legal security and two of the vps were on",
+        "that shouldn't be possible\n\ni flagged it to matt but moved on there was too much to triage\n\nkiera messaged me you're gonna want to look at egress volumes on the staging subnet\n\ndata was flowing out a lot of it"
+      ],
+      "response": "Over 7 GB of outbound traffic was detected in the last six hours.",
+      "reference": "over 7gb",
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "Which security engineer was contacted about the suspicious logins?",
+      "retrieved_contexts": [
+        "three logins from different subnets that's when i started to get uneasy\n\ni sent a quick message to matt our security engineer hey got something odd with sharris logins may be worth a look",
+        "i opened up the vpn auth logs and searched for any unusual login patterns\n\nsure enough a user jmalik had connected via corp-vpn3 at 2:47 am and stayed online for 6 hours\n\nthat didn't make any sense junaid malik was out on leave he'd filed pto two weeks ago"
+      ],
+      "response": "Matt",
+      "reference": "matt",
+      "context_precision": 0.9999999999
+    }
+  ],
+  "evaluation_type": "rag_evaluation",
+  "evaluation_config": {
+    "top_k": 2,
+    "max_questions": null,
+    "total_questions_attempted": 20,
+    "successful_questions": 20
+  }
+}

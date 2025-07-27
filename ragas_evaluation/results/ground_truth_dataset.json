@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "source_document": "The Day Everything Slowed Down",
+    "description": "Realistic cybersecurity analyst questions based on factual events",
+    "creation_method": "manual_analysis_of_document",
+    "purpose": "Evaluate RAG system with realistic analyst questions",
+    "total_questions": 20,
+    "categories": ["Timeline", "Actors", "Files", "Systems", "Network", "Incident_Response"]
+  },
+  "ground_truth": [
+    {
+      "question": "What time did the narrator shut down their work laptop on Monday evening?",
+      "answer": "7:12 pm",
+      "context_hint": "Look for Monday evening activities and laptop shutdown time",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What time did the narrator go to bed on Monday night?",
+      "answer": "10:30 pm",
+      "context_hint": "Look for Monday night bedtime",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What time did the staging-3 server reboot occur?",
+      "answer": "3:11 am",
+      "context_hint": "Look for staging-3 reboot time in system logs",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What time did Kiera send the Slack message about the build runner?",
+      "answer": "3:27 am",
+      "context_hint": "Look for Kiera's Slack message timestamp",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What time did the suspicious file get copied to multiple machines?",
+      "answer": "3:13 am",
+      "context_hint": "Look for time when logi_loader.dll was copied",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time did sharris's account first authenticate successfully?",
+      "answer": "6:12 am",
+      "context_hint": "Look for sharris authentication times",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time did jmalik connect to the VPN?",
+      "answer": "2:47 am",
+      "context_hint": "Look for jmalik VPN connection time",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time were the earliest DNS requests detected?",
+      "answer": "4:23 am",
+      "context_hint": "Look for earliest DNS activity time",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time did the incident response team finish working on Tuesday?",
+      "answer": "8:19 pm",
+      "context_hint": "Look for when they stopped working on Tuesday",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time did the narrator leave the office on Tuesday?",
+      "answer": "9:02 pm",
+      "context_hint": "Look for when the narrator left the office",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What time did the narrator arrive at the office on Wednesday?",
+      "answer": "7:30 am",
+      "context_hint": "Look for Wednesday morning arrival time",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was the name of the suspicious DLL file?",
+      "answer": "logi_loader.dll",
+      "context_hint": "Look for the suspicious file name",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What file had its permissions changed before the reboot?",
+      "answer": "buildconfig.yaml",
+      "context_hint": "Look for file permission changes on staging-3",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the label on the USB stick found in the training PC?",
+      "answer": "marketing_campaign_2020",
+      "context_hint": "Look for USB stick label",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What domain was used for data exfiltration?",
+      "answer": "cdn.nodeflux.ai",
+      "context_hint": "Look for the domain used for outbound traffic",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What domain was mentioned alongside updates-status-sync.live?",
+      "answer": "metrics.windowupdate.io",
+      "context_hint": "Look for domains mentioned with updates-status-sync.live",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What VPN server did jmalik connect to?",
+      "answer": "corp-vpn3",
+      "context_hint": "Look for jmalik's VPN connection details",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which server showed malformed packets from switch sw-07b?",
+      "answer": "staging-3",
+      "context_hint": "Look for server with malformed packets from sw-07b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the total amount of outbound traffic detected?",
+      "answer": "over 7gb",
+      "context_hint": "Look for data volume measurements",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which security engineer was contacted about the suspicious logins?",
+      "answer": "matt",
+      "context_hint": "Look for security engineer name",
+      "difficulty": "easy"
+    }
+  ]
+} 
